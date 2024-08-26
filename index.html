@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="index.js">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Quiz</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.7/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="container mx-auto p-4">
+    <!-- Start Quiz Button -->
+    <div class="start-screen flex flex-col items-center justify-center h-screen">
+      <button class="start-btn bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Section -->
+    <div class="quiz-screen hidden">
+      <div class="timer mb-4">
+        <span class="text-lg font-bold">Time Left:</span> <span class="timer-sec text-xl font-semibold">15</span> seconds
+      </div>
+      <div class="question mb-4">
+        <span class="text-lg font-semibold">Question will be here</span>
+      </div>
+      <div class="options mb-4">
+        <!-- Options will be injected here by JavaScript -->
+      </div>
+      <button class="next-btn bg-green-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-600 transition">Next Question</button>
+    </div>
+
+    <!-- Result Section -->
+    <div class="result-screen hidden text-center">
+      <div class="text-2xl font-bold mb-4">Quiz Complete!</div>
+      <div class="score mb-4">You got <span class="score-text font-bold">0</span> out of 10 questions correct.</div>
+      <button class="restart-btn bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition">Replay Quiz</button>
+    </div>
+  </div>
+
+  <script src="index.js" type="module"></script>
 </body>
 </html>
